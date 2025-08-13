@@ -1,7 +1,15 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "extends": ["@vue/tsconfig/tsconfig.dom.json"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "allowJs": false,
+    "types": [],
+    "incremental": true,
+    "skipLibCheck": true,
+    "lib": [ "dom", "es2023","es2024"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
 }
